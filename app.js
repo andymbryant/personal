@@ -1,7 +1,11 @@
+window.onscroll = function () {
+    scroll()
+};
+
 function scroll() {
-    let nav = document.getElementById('nav')
-    if (nav.classList.contains('nav-inactive')) {
-        nav.classList.remove('nav-inactive')
-        nav.classList.add('nav-active')
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("nav").style.height = "50px";
+    } else {
+        document.getElementById("nav").style.height = "100px";
     }
 }
