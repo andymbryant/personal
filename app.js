@@ -1,11 +1,7 @@
-let title = document.getElementById('title');
-
-title.addEventListener('focus', function (event) {
-    alert('hello')
-    // event.target.style.background = 'pink';
-}, true);
-
-title.addEventListener('blur', function (event) {
-    alert('hello')
-    event.target.style.background = '';
-}, true);
+function scroll() {
+    let nav = document.getElementById('nav')
+    if (nav.classList.contains('nav-inactive')) {
+        nav.classList.remove('nav-inactive')
+        nav.classList.add('nav-active')
+    }
+}

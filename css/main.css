@@ -7,8 +7,8 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  border: solid black 1px;
-  transition: .5s; }
+  transition: .5s;
+  background-color: lightgrey; }
   nav ul {
     position: absolute;
     top: 20px;
@@ -28,7 +28,9 @@ nav {
   height: 100px; }
 
 .nav-active {
-  height: 50px; }
+  height: 50px;
+  border-bottom: black solid 1px;
+  background-color: grey; }
 
 .title-section {
   position: relative;
