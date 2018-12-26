@@ -18,7 +18,8 @@ nav {
     font-size: 2rem;
     font-weight: 700;
     color: white;
-    margin-left: 2.5rem; }
+    margin-left: 2.5rem;
+    text-decoration: none; }
   nav ul {
     color: white;
     list-style: none;
@@ -28,19 +29,29 @@ nav {
     nav ul li {
       display: inline-block;
       cursor: pointer; }
-    nav ul .nav-icon {
-      font-size: 1.5rem;
-      margin-left: .8rem; }
-    nav ul a {
-      color: white;
-      padding: 6px 12px;
-      text-decoration: none; }
+      nav ul li .nav-icon {
+        font-size: 1.5rem;
+        margin-left: .8rem; }
+      nav ul li a {
+        color: white;
+        padding: 6px 12px;
+        text-decoration: none; }
 
 .title-section {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-color: #119948; }
+  background-color: #119948;
+  display: flex;
+  align-items: center; }
+  .title-section .title-card {
+    z-index: 101;
+    margin: auto; }
+    .title-section .title-card .header {
+      font-size: 2rem;
+      color: white; }
+    .title-section .title-card .sub-header {
+      font-size: .5rem; }
 
 .about-section {
   position: relative;
@@ -50,5 +61,69 @@ nav {
   position: relative;
   height: 700px;
   background-color: lightgrey; }
+
+.experience-section {
+  position: relative;
+  height: 700px;
+  background-color: white; }
+  .experience-section .experience-title {
+    font-size: 2rem;
+    margin: 2rem auto;
+    text-align: center;
+    font-weight: 700;
+    text-decoration: underline; }
+  .experience-section .res-item {
+    width: 60%;
+    margin: 0 auto;
+    position: relative; }
+    .experience-section .res-item .company-image {
+      position: absolute;
+      left: -120px;
+      width: 100px; }
+      .experience-section .res-item .company-image img {
+        width: 100%;
+        height: 100%; }
+    .experience-section .res-item .res-item-inner {
+      border-left: 1px lightgrey solid;
+      height: 100px;
+      padding: 1rem 1rem 6rem 1rem; }
+      .experience-section .res-item .res-item-inner .timeline-circle {
+        position: absolute;
+        left: -7px;
+        top: -3px;
+        color: #119948; }
+      .experience-section .res-item .res-item-inner .res-item-details {
+        display: inline-block;
+        float: left;
+        width: 39.5%; }
+        .experience-section .res-item .res-item-inner .res-item-details .res-item-date {
+          font-size: .8rem; }
+        .experience-section .res-item .res-item-inner .res-item-details .res-item-company {
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: .5rem; }
+        .experience-section .res-item .res-item-inner .res-item-details .res-item-role {
+          font-style: italic; }
+      .experience-section .res-item .res-item-inner .res-item-desc {
+        width: 59%;
+        display: inline-block;
+        float: right; }
+        .experience-section .res-item .res-item-inner .res-item-desc ul {
+          margin: 0;
+          padding: 0;
+          list-style: none; }
+          .experience-section .res-item .res-item-inner .res-item-desc ul li {
+            text-indent: -10px;
+            margin-bottom: .5rem; }
+          .experience-section .res-item .res-item-inner .res-item-desc ul li::before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f111";
+            font-size: 8px;
+            display: inline-block;
+            padding-right: 3px;
+            vertical-align: middle;
+            font-weight: 700;
+            margin-right: .5rem;
+            color: #119948; }
 
 /*# sourceMappingURL=main.css.map */
