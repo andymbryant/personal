@@ -3,7 +3,7 @@ window.onscroll = function () {
 };
 
 function scroll() {
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
         document.getElementById("nav").style.height = "50px";
     } else {
         document.getElementById("nav").style.height = "100px";
