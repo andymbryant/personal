@@ -1,6 +1,8 @@
 html {
   scroll-behavior: smooth;
   font-family: "Raleway", sans-serif; }
+  html section {
+    padding-top: 3rem; }
 
 nav {
   z-index: 100;
@@ -29,13 +31,20 @@ nav {
     nav ul li {
       display: inline-block;
       cursor: pointer; }
-      nav ul li .nav-icon {
-        font-size: 1.5rem;
-        margin-left: .8rem; }
       nav ul li a {
         color: white;
         padding: 6px 12px;
         text-decoration: none; }
+      nav ul li .nav-icon {
+        font-size: 1.5rem;
+        width: 12px;
+        margin: 0; }
+      nav ul li .github {
+        color: black; }
+      nav ul li .linkedin {
+        color: #1171ab; }
+      nav ul li .vimeo {
+        color: #1daeec; }
 
 .title-section {
   position: relative;
@@ -46,76 +55,132 @@ nav {
   align-items: center; }
   .title-section .title-card {
     z-index: 101;
-    margin: auto; }
+    margin: auto;
+    width: 50%;
+    text-align: center; }
+    .title-section .title-card .emphasis {
+      font-weight: 700;
+      color: #444444; }
     .title-section .title-card .header {
-      font-size: 2rem;
+      font-size: 4rem;
       color: white; }
     .title-section .title-card .sub-header {
-      font-size: .5rem; }
+      font-size: 1.8rem; }
+  .title-section a {
+    text-decoration: none; }
+  .title-section .chevron {
+    z-index: 101;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    font-size: 2rem;
+    color: white; }
+
+.section-title {
+  font-size: 2rem;
+  margin: 0 auto 3rem;
+  text-align: center;
+  font-weight: 700;
+  text-decoration: underline; }
 
 .about-section {
   position: relative;
   height: 700px; }
 
-.portfolio-section {
+.projects-section {
   position: relative;
-  height: 700px;
-  background-color: lightgrey; }
+  background-color: #f0f0f0; }
+  .projects-section .projects-container {
+    margin: auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    .projects-section .projects-container .project {
+      width: 500px;
+      border: 1px solid grey;
+      background-color: white;
+      margin-bottom: 1rem; }
+      .projects-section .projects-container .project .project-image {
+        float: left;
+        width: 200px;
+        display: inline-block;
+        background-color: grey; }
+        .projects-section .projects-container .project .project-image img {
+          width: 100%;
+          height: 100%; }
+      .projects-section .projects-container .project .project-details {
+        width: 250px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem; }
+        .projects-section .projects-container .project .project-details .project-title {
+          margin-bottom: .5rem;
+          text-align: center;
+          font-size: 1.5rem;
+          font-weight: 700; }
+        .projects-section .projects-container .project .project-details .project-description {
+          margin-bottom: .5rem; }
+        .projects-section .projects-container .project .project-details .project-tech {
+          color: #444444;
+          font-style: italic; }
 
-.experience-section {
+.resume-section {
   position: relative;
-  height: 700px;
   background-color: white; }
-  .experience-section .experience-title {
-    font-size: 2rem;
-    margin: 2rem auto;
-    text-align: center;
-    font-weight: 700;
-    text-decoration: underline; }
-  .experience-section .res-item {
+  .resume-section .res-item {
     width: 60%;
     margin: 0 auto;
-    position: relative; }
-    .experience-section .res-item .company-image {
+    position: relative;
+    display: flex;
+    align-content: center; }
+    .resume-section .res-item .company-image {
       position: absolute;
-      left: -120px;
-      width: 100px; }
-      .experience-section .res-item .company-image img {
+      left: -160px;
+      width: 120px; }
+      .resume-section .res-item .company-image img {
         width: 100%;
         height: 100%; }
-    .experience-section .res-item .res-item-inner {
-      border-left: 1px lightgrey solid;
+    .resume-section .res-item .res-item-inner {
+      border-left: 1px #444444 solid;
       height: 100px;
-      padding: 1rem 1rem 6rem 1rem; }
-      .experience-section .res-item .res-item-inner .timeline-circle {
+      padding: 0rem 1rem 8rem 1rem; }
+      .resume-section .res-item .res-item-inner .timeline-circle {
         position: absolute;
         left: -7px;
-        top: -3px;
+        top: 0px;
         color: #119948; }
-      .experience-section .res-item .res-item-inner .res-item-details {
+      .resume-section .res-item .res-item-inner .res-item-details {
         display: inline-block;
         float: left;
         width: 39.5%; }
-        .experience-section .res-item .res-item-inner .res-item-details .res-item-date {
-          font-size: .8rem; }
-        .experience-section .res-item .res-item-inner .res-item-details .res-item-company {
-          font-size: 1.5rem;
-          font-weight: 700;
+        .resume-section .res-item .res-item-inner .res-item-details .res-item-date {
+          font-size: .9rem;
           margin-bottom: .5rem; }
-        .experience-section .res-item .res-item-inner .res-item-details .res-item-role {
-          font-style: italic; }
-      .experience-section .res-item .res-item-inner .res-item-desc {
+        .resume-section .res-item .res-item-inner .res-item-details .res-item-company {
+          font-size: 1.8rem;
+          font-weight: 700;
+          margin-bottom: .4rem; }
+        .resume-section .res-item .res-item-inner .res-item-details .res-item-role {
+          font-style: italic;
+          font-size: 1rem;
+          margin-bottom: .8rem; }
+        .resume-section .res-item .res-item-inner .res-item-details .res-item-city {
+          font-weight: 200; }
+      .resume-section .res-item .res-item-inner .res-item-desc {
         width: 59%;
         display: inline-block;
         float: right; }
-        .experience-section .res-item .res-item-inner .res-item-desc ul {
+        .resume-section .res-item .res-item-inner .res-item-desc ul {
           margin: 0;
           padding: 0;
           list-style: none; }
-          .experience-section .res-item .res-item-inner .res-item-desc ul li {
+          .resume-section .res-item .res-item-inner .res-item-desc ul li {
             text-indent: -10px;
             margin-bottom: .5rem; }
-          .experience-section .res-item .res-item-inner .res-item-desc ul li::before {
+          .resume-section .res-item .res-item-inner .res-item-desc ul li::before {
             font-family: "Font Awesome 5 Free";
             content: "\f111";
             font-size: 8px;
@@ -125,5 +190,11 @@ nav {
             font-weight: 700;
             margin-right: .5rem;
             color: #119948; }
+      .resume-section .res-item .res-item-inner .timeline-end {
+        position: absolute;
+        bottom: 0;
+        left: -25px;
+        width: 50px;
+        border-top: 2px solid #444444; }
 
 /*# sourceMappingURL=main.css.map */

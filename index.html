@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700,400,200" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
@@ -17,24 +17,65 @@
     <nav id="nav">
         <div><a id="name-plate" class="name-plate" href="#title">Andy Bryant</a></div>
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Porfolio</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><i class="nav-icon fab fa-github"></i></li>
-            <li><i class="nav-icon fab fa-linkedin"></i></li>
-            <li><i class="nav-icon fab fa-vimeo"></i></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="https://github.com/andymbryant" target="_blank"><i class="nav-icon github fab fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/in/andymbryant" target="_blank"><i class="nav-icon linkedin fab fa-linkedin-in"></i></a></li>
+            <li><a href="https://vimeo.com/andymbryant" target="_blank"><i class="nav-icon vimeo fab fa-vimeo-v"></i></a></li>
         </ul>
     </nav>
     <main>
         <section id="title" class="title-section">
             <div class="title-card">
-                <div class="header">I am a full stack developer web.</div>
-                <div class="sub-header">I build applications for research and education.</div>
+                <div class="header">I am a <span class="emphasis">Full Stack Developer</span> with a background in
+                    <span class="emphasis">education</span>
+                    and <span class="emphasis">media.</span></div>
+                <!-- <div class="sub-header">I build web applications for researchers in Boston.</div> -->
+            </div>
+            <a href="#resume" class="chevron"><i class="fas fa-chevron-circle-down"></i></a>
+        </section>
+        <section id="projects" class="projects-section">
+            <div class="section-title">Projects</div>
+            <div class="projects-container">
+                <div class="project">
+                    <div class="project-image"><img src="https://via.placeholder.com/200" alt=""></div>
+                    <div class="project-details">
+                        <div class="project-title">StratMapper</div>
+                        <div class="project-description">Designed and built spatiotemporal visualization and labeling
+                            system for large, gaming datasets.</div>
+                        <div class="project-tech">React, D3.js, Node, MongoDB, Mongoose</div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-image"><img src="https://via.placeholder.com/200" alt=""></div>
+                    <div class="project-details">
+                        <div class="project-title">Glyph</div>
+                        <div class="project-description">Designed and built spatiotemporal visualization and labeling
+                            system for large, gaming datasets.</div>
+                        <div class="project-tech">D3.js</div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-image"><img src="img/beer-img.jpg" alt=""></div>
+                    <div class="project-details">
+                        <div class="project-title">The Beer Chart</div>
+                        <div class="project-description">Beer Chart</div>
+                        <div class="project-tech">React, Redux, Node, MongoDB, Mongoose</div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-image"><img src="https://via.placeholder.com/200" alt=""></div>
+                    <div class="project-details">
+                        <div class="project-title">Movie Listr</div>
+                        <div class="project-description">Designed and built spatiotemporal visualization and labeling
+                            system for large, gaming datasets.</div>
+                        <div class="project-tech">jQuery, Handlebars, Node, MongoDB, Mongoose</div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section id="experience" class="experience-section">
-            <div class="experience-title">Work Experience</div>
-
+        <section id="resume" class="resume-section">
+            <div class="section-title">Experience</div>
             <div class="res-item">
                 <div class="company-image"><a href="https://web.northeastern.edu/guii/" target="_blank"><img src="img/neu-logo.jpg"
                             alt=""></a></div>
@@ -58,34 +99,111 @@
                 </div>
             </div>
             <div class="res-item">
-                <div class="company-image"><a href="https://web.northeastern.edu/guii/" target="_blank"><img src="img/neu-logo.jpg"
+                <div class="company-image"><a href="https://www.academyart.edu/" target="_blank"><img src="img/aa-logo.jpg"
                             alt=""></a></div>
                 <div class="res-item-inner">
                     <i class="timeline-circle top fas fa-circle"></i>
                     <div class="res-item-details">
-                        <div class="res-item-date">Apr 2018 to Present</div>
-                        <div class="res-item-company">Northeastern University</div>
-                        <div class="res-item-role">Software Developer, Research Assistant</div>
-                        <div class="res-item-city">Boston, MA</div>
+                        <div class="res-item-date">Jan 2017 to Mar 2018</div>
+                        <div class="res-item-company">Academy of Art University</div>
+                        <div class="res-item-role">Instructional Media Producer</div>
+                        <div class="res-item-city">San Francisco, CA</div>
                     </div>
                     <div class="res-item-desc">
                         <ul>
-                            <li>Design, build, and maintain full-stack web applications for machine learning and gaming
-                                lab
-                                at CCIS</li>
-                            <li>Contribute written material and interactive media to research proposals and papers</li>
-                            <li>Produce video presentations and tutorials for clients</li>
+                            <li>Built online courses with proprietary CMS, websites, and applications with JavaScript,
+                                Node</li>
+                            <li>Produced, directed, shot, edited dozens of educational video projects in-studio and
+                                on-location</li>
+                            <li>Managed production, post-production teams</li>
                         </ul>
                     </div>
                 </div>
             </div>
+            <div class="res-item">
+                <div class="company-image"><a href="https://vimeo.com/roblemedia" target="_blank"><img src="img/re-logo.jpg"
+                            alt=""></a></div>
+                <div class="res-item-inner">
+                    <i class="timeline-circle top fas fa-circle"></i>
+                    <div class="res-item-details">
+                        <div class="res-item-date">Jan 2014 to Dec 2016</div>
+                        <div class="res-item-company">Roble Education</div>
+                        <div class="res-item-role">Co-Founder, CTO, Producer</div>
+                        <div class="res-item-city">New York, NY</div>
+                    </div>
+                    <div class="res-item-desc">
+                        <ul>
+                            <li>Managed operations, compliance, HR, and finances for educational media company</li>
+                            <li>Produced and managed hundreds of domestic and international media projects</li>
+                            <li>Built websites and maintained learning platforms for multiple institutions</li>
+                            <li>Notable contracts included UMiami, NYU, Mineola (NY), and Orange (NJ)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="res-item">
+                <div class="company-image"><a href="https://www.facebook.com/ProsandConsStudios/" target="_blank"><img
+                            src="img/pac-logo.jpg" alt=""></a></div>
+                <div class="res-item-inner">
+                    <i class="timeline-circle top fas fa-circle"></i>
+                    <div class="res-item-details">
+                        <div class="res-item-date">Sep 2010 to Sep 2013</div>
+                        <div class="res-item-company">Pros and Cons Studios</div>
+                        <div class="res-item-role">Co-Founder, Producer</div>
+                        <div class="res-item-city">Los Angeles, CA</div>
+                    </div>
+                    <div class="res-item-desc">
+                        <ul>
+                            <li>Managed operations, compliance, HR, and finances for educational media company</li>
+                            <li>Produced and managed hundreds of domestic and international media projects</li>
+                            <li>Built websites and maintained learning platforms for multiple institutions</li>
+                            <li>Notable contracts included UMiami, NYU, Mineola (NY), and Orange (NJ)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="res-item">
+                <div class="company-image"><a href="https://www.tasis.com" target="_blank"><img src="img/t-logo.jpg"
+                            alt=""></a></div>
+                <div class="res-item-inner">
+                    <i class="timeline-circle top fas fa-circle"></i>
+                    <div class="res-item-details">
+                        <div class="res-item-date">Jun 2008 to Aug 2013 (Summers)</div>
+                        <div class="res-item-company">The American School in Switzerland</div>
+                        <div class="res-item-role">Teacher, Media Producer</div>
+                        <div class="res-item-city">Lugano, Switzerland</div>
+                    </div>
+                    <div class="res-item-desc">
+                        <ul>
+                            <li>Taught English, drama, and filmmaking to students from around the world</li>
+                            <li>Produced video marketing projects for Summer and Winter programs using DSLR systems</li>
+                            <li>Led trips for students and staff throughout Switzerland, Italy</li>
+                            <li>Assisted with administrative tasks for a program director</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="res-item">
+                <div class="company-image"><a href="https://www.nbcmiami.com" target="_blank"><img src="img/nbc-logo.jpg"
+                            alt=""></a></div>
+                <div class="res-item-inner">
+                    <i class="timeline-circle top fas fa-circle"></i>
+                    <div class="res-item-details">
+                        <div class="res-item-date">Oct 2009 to Apr 2010</div>
+                        <div class="res-item-company">NBC Miami</div>
+                        <div class="res-item-role">Video Production Intern, Contractor</div>
+                        <div class="res-item-city">Miramar, FL</div>
+                    </div>
+                    <div class="res-item-desc">
+                        <ul>
+                            <li>Produced, directed, and edited video packages for NBCMiami.com and NBC6 broadcast</li>
+                            <li>Continued as paid contractor after completing internship</li>
+                        </ul>
+                    </div>
+                    <!-- <div class="timeline-end"></div> -->
+                </div>
+            </div>
         </section>
-        <section id="about" class="about-section">
-        </section>
-        <section id="portfolio" class="portfolio-section">
-        </section>
-
-
     </main>
     <script src="app.js"></script>
 </body>

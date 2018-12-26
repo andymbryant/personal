@@ -1,11 +1,15 @@
 $primary: #119948;
-$secondary: lightgrey;
+$secondary: rgb(68, 68, 68);
 $terciary: white;
 $font-stack: 'Raleway', sans-serif;
 
 html {
     scroll-behavior: smooth;
     font-family: $font-stack;
+
+    section {
+        padding-top: 3rem;
+    }
 }
 
 nav {
@@ -38,16 +42,31 @@ nav {
         li { 
             display: inline-block;
             cursor: pointer;
+
+            a {
+                color: $terciary;
+                padding: 6px 12px;
+                text-decoration: none;
+                }
             
             .nav-icon {
                 font-size: 1.5rem;
-                margin-left: .8rem;
+                // margin-left: .8rem;
+                width: 12px;
+                margin: 0;
             }
-    
-            a {
-            color: $terciary;
-            padding: 6px 12px;
-            text-decoration: none;
+            .github {
+                color: black;
+            }
+
+            .linkedin {
+                color: #1171ab;
+                // background-color: white;
+            }
+
+            .vimeo {
+                color: #1daeec;
+                // background-color: white;
             }
         }
     }
@@ -64,14 +83,40 @@ nav {
     .title-card {
         z-index: 101;
         margin: auto;
+        width: 50%;
+        text-align: center;
+        .emphasis {
+            font-weight: 700;
+            color: $secondary;
+        }
         .header {
-            font-size: 2rem;
+            font-size: 4rem;
             color: $terciary;
         }
         .sub-header {
-            font-size: .5rem;
+            font-size: 1.8rem;
         }
     }
+    a {
+        text-decoration: none;
+    }
+    .chevron {
+        z-index: 101;
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        font-size: 2rem;
+        color: white;
+
+    }
+}
+
+.section-title {
+    font-size: 2rem;
+    margin: 0 auto 3rem;
+    text-align: center;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 .about-section {
@@ -79,34 +124,79 @@ nav {
     height: 700px;
   }
 
-.portfolio-section {
+.projects-section {
     position: relative;
-    height: 700px;
-    background-color: lightgrey;
+    background-color: rgb(240, 240, 240);
+
+    .projects-container {
+        margin: auto;
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .project {
+            width: 500px;
+            border: 1px solid grey;
+            background-color: white;
+            margin-bottom: 1rem;
+
+            .project-image {
+                float: left;
+                width: 200px;
+                display: inline-block;
+                background-color: grey;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .project-details {
+                width: 250px;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 1rem;
+
+                .project-title {
+                    margin-bottom: .5rem;
+                    text-align: center;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                }
+
+                .project-description {
+
+                    margin-bottom: .5rem;
+                }
+
+                .project-tech {
+                    color: $secondary;
+                    font-style: italic;
+                }
+            }
+        }
+    }
 }
 
-.experience-section {
+.resume-section {
     position: relative;
-    height: 700px;
     background-color: white;
-
-    .experience-title {
-        font-size: 2rem;
-        margin: 2rem auto;
-        text-align: center;
-        font-weight: 700;
-        text-decoration: underline;
-    }
 
     .res-item {
         width: 60%;
         margin: 0 auto;
         position: relative;
+        display: flex;
+        align-content: center;
 
         .company-image {
             position: absolute;
-            left: -120px;
-            width: 100px;
+            left: -160px;
+            width: 120px;
 
             img {
                 width: 100%;
@@ -117,12 +207,12 @@ nav {
         .res-item-inner {
             border-left: 1px $secondary solid;
             height: 100px;
-            padding: 1rem 1rem 6rem 1rem;
+            padding: 0rem 1rem 8rem 1rem;
 
             .timeline-circle {
                 position: absolute;
                 left: -7px;
-                top: -3px;
+                top: 0px;
                 color: $primary
             }
 
@@ -132,16 +222,22 @@ nav {
                 width: 39.5%;
 
                 .res-item-date {
-                    font-size: .8rem;
+                    font-size: .9rem;
+                    margin-bottom: .5rem;
                 }
 
                 .res-item-company {
-                    font-size: 1.5rem;
+                    font-size: 1.8rem;
                     font-weight: 700;
-                    margin-bottom: .5rem;
+                    margin-bottom: .4rem;
                 }
                 .res-item-role {
                     font-style: italic;
+                    font-size: 1rem;
+                    margin-bottom: .8rem;
+                }
+                .res-item-city {
+                    font-weight: 200;
                 }
 
             }
@@ -172,6 +268,14 @@ nav {
                         color: $primary;
                     }
                 }
+            }
+            .timeline-end {
+                position: absolute;
+                bottom: 0;
+                left: -25px;
+                width: 50px;
+                border-top: 2px solid $secondary;
+
             }
         }
     }
