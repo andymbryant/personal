@@ -3,6 +3,9 @@ html {
   font-family: "Raleway", sans-serif; }
   html section {
     padding-top: 3rem; }
+  html img {
+    width: 100%;
+    height: 100%; }
 
 nav {
   z-index: 100;
@@ -56,7 +59,7 @@ nav {
   .title-section .title-card {
     z-index: 101;
     margin: auto;
-    width: 50%;
+    width: 60%;
     text-align: center; }
     .title-section .title-card .emphasis {
       font-weight: 700;
@@ -105,10 +108,8 @@ nav {
         float: left;
         width: 200px;
         display: inline-block;
-        background-color: grey; }
-        .projects-section .projects-container .project .project-image img {
-          width: 100%;
-          height: 100%; }
+        background-color: grey;
+        border-right: 1px solid grey; }
       .projects-section .projects-container .project .project-details {
         width: 250px;
         margin: auto;
@@ -140,9 +141,6 @@ nav {
       position: absolute;
       left: -160px;
       width: 120px; }
-      .resume-section .res-item .company-image img {
-        width: 100%;
-        height: 100%; }
     .resume-section .res-item .res-item-inner {
       border-left: 1px #444444 solid;
       height: 100px;
