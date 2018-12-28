@@ -105,8 +105,8 @@ html {
       margin-bottom: 2.5rem; }
       @media (min-width: 320px) and (max-width: 767px) {
         .title-section .title-card .andy-image {
-          width: 100px;
-          height: 100px;
+          width: 90px;
+          height: 90px;
           margin-bottom: 1rem; } }
       .title-section .title-card .andy-image img {
         border-radius: 50%;
@@ -119,6 +119,7 @@ html {
       margin-bottom: 2rem; }
       @media (min-width: 320px) and (max-width: 767px) {
         .title-section .title-card .header {
+          margin-bottom: 1.4rem;
           font-size: 1.8rem; } }
     .title-section .title-card .sub-header {
       font-size: 1rem;
