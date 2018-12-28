@@ -3,6 +3,23 @@ $highlight: lighten($primary, 20);
 $secondary: rgb(70, 70, 70);
 $terciary: white;
 $font-stack: 'Roboto', sans-serif;
+$radius: 20px;
+$radius-min: 10px;
+$transition: .2s;
+$shadow: 0px 6px 10px lightgrey;
+$border: 2px solid $primary;
+
+@mixin breakpoint($point) {
+    @if $point == small {
+        @media (min-width : 320px) and (max-width : 767px) {@content;}
+    }
+    @else if $point == medium {
+        @media (min-width : 768px) and (max-width : 1023px) {@content;}
+    }
+    @else if $point == large {
+      @media (min-width: 1024px) and (max-width: 1320px)  { @content; }
+    }
+  }
 
 html {
     scroll-behavior: smooth;
@@ -12,100 +29,215 @@ html {
         margin: 0;
         padding: 0;
 
-        .section {
-            padding: 3rem 0;
-        }
-
         img {
             width: 100%;
             height: 100%;
         }
     }
-
-
 }
 
-nav {
-    z-index: 100;
-    width: 100%;
-    position: fixed;
+.section-title {
+    font-size: 2rem;
+    margin: 0 auto 3rem;
+    text-align: center;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.section-tag, .contact-tag, .experience-tag {
+    position: absolute;
     top: 0;
-    left: 0;
-    transition: .2s;
+    left: 8%;
+    padding: 0 1rem;
+    height: 35px;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 35px;
     background-color: $primary;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    border-bottom-left-radius: $radius-min;
+    border-bottom-right-radius: $radius-min;
+    box-shadow: $shadow;
+}
 
-    .name-plate {
-        font-size: 2rem;
-        font-weight: 700;
-        color: $terciary;
-        margin-left: 2.5rem;
-        text-decoration: none;
-    }
-    ul {
-        color: $terciary;
-        list-style: none;
-        display: flex;
-        align-items: center;
-        margin-right: 2.5rem;
-        
-        li { 
-            display: inline-block;
-            cursor: pointer;
+.experience-tag {
+    background-color: rgb(240, 240, 240);
+    color: grey;
+}
 
-            a {
-                color: $terciary;
-                padding: 6px 12px;
-                text-decoration: none;
-                }
-            a:hover {
-                color: $highlight
-            }
-            
-            .nav-icon {
-                font-size: 1.5rem;
-                width: 12px;
-                margin: 0;
-            }
-            .github {
-                color: black;
-            }
-
-            .linkedin {
-                color: #1171ab;
-            }
-
-            .vimeo {
-                color: #1daeec;
-            }
-        }
-    }
+.contact-tag {
+    background-color: white;
+    color: $primary;
+    box-shadow: none;
 }
 
 .title-section {
     height: 100vh;
     width: 100%;
-    background-color: $primary;
+    background-color: $terciary;
     display: flex;
+    justify-content: center;
+
+    .name-plate {
+        position: absolute;
+        font-size: 2rem;
+        font-weight: 700;
+        color: $primary;
+        top: 5%;
+        left: 5%;
+        text-decoration: none;
+        @include breakpoint(small) {
+            top: 3%;
+            left: 3%;
+            font-size: 1.5rem;
+        }
+    }
+
+    .contact-button {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        width: 100px;
+        height: 30px;
+        background-color: white;
+        color: $primary;
+        border: $border;
+        border-radius: $radius;
+        text-align: center;
+        transition: .2s;
+        cursor: pointer;
+        line-height: 30px;
+        text-decoration: none;
+        box-shadow: $shadow;
+        font-weight: 700;
+        @include breakpoint(small) {
+            top: 3%;
+            right: 3%;
+            font-size: 1rem;
+        }
+    }
+
+    .contact-button:hover {
+        background-color: $primary;
+        color: white;
+    }
 
     .title-card {
-        z-index: 101;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         margin: auto;
         width: 60%;
         text-align: center;
-        .emphasis {
-            font-weight: 700;
-            color: $secondary;
+        @include breakpoint(medium) {
+            width: 70%;
         }
+        @include breakpoint(small) {
+            width: 90%;
+        }
+        .andy-image {
+            margin: auto;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 2.5rem;
+            @include breakpoint(small) {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 1rem;
+            }
+            img {
+                border-radius: 50%;
+                border: 2px solid black;
+                box-shadow: $radius;
+            }
+        }
+
         .header {
             font-size: 4rem;
-            color: $terciary;
+            font-weight: 700;
+            color: black;
+            margin-bottom: 2rem;
+            @include breakpoint(small) {
+                font-size: 2rem;
+            }
         }
         .sub-header {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
+            font-weight: 200;
+            line-height: 2rem;
+            @include breakpoint(small) {
+                line-height: 1.5rem;
+                font-size: 1.2rem;
+            }
+            .emphasis {
+                font-weight: 400;
+                color: $secondary;
+            }
+        }
+        .container {
+            margin-top: 5rem;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            @include breakpoint(small) {
+                justify-content: space-between;
+            }
+            .sub-container-tools, .sub-container-skills {
+                position: relative;
+                border: $border;
+                border-radius: $radius;
+                padding: 1rem;
+                width: 30%;
+                box-shadow: $shadow;
+                @include breakpoint(small) {
+                    width: 40%;
+                }
+
+                .title {
+                    position: absolute;
+                    top: -29px;
+                    font-weight: 700;
+                    color: white;
+                    font-size: 1.2rem;
+                    border-top-left-radius: $radius-min;
+                    border-top-right-radius: $radius-min;
+                    background-color: $primary;
+                    padding: .3rem .8rem 0;
+                }
+                .languages {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    position: relative; 
+                    flex-wrap: wrap;
+                }
+
+                .language {
+                    display: inline-block;
+                    background-color: rgb(236, 234, 234);
+                    margin: .2rem;
+                    font-size: .9rem;
+                    padding: .5rem .8rem;
+                    border-radius: $radius-min;
+                    @include breakpoint(small) {
+                        font-size: .7rem;
+                    }
+                }
+
+                .skills {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    height: 100%;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                }
+            }
+        }
+        .student {
+            font-style: italic;
         }
     }
     a {
@@ -122,67 +254,109 @@ nav {
     }
 }
 
-.section-title {
-    font-size: 2rem;
-    margin: 0 auto 3rem;
-    text-align: center;
-    font-weight: 700;
-    text-decoration: underline;
-}
-
 .about-section {
     position: relative;
-    height: 700px;
+    background-color: $primary;
+    padding: 2rem;
+    display: flex;
+    align-content: center;
+
+    .about-card {
+        margin: auto;
+        text-align: center;
+        width: 65%;
+        .about-header {
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .about-subheader {
+            font-weight: 200;
+            color:white;
+        
+        }
+    }
   }
 
 .projects-section {
     position: relative;
     background-color: rgb(240, 240, 240);
+    padding: 3rem 0 1rem 0;
+    @include breakpoint(small) {
+        font-size: 1rem;
+    }
 
     .projects-container {
         margin: auto;
-        width: 70%;
+        min-width: 320px;
+        width: 80%;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
 
         .project {
+            height: 200px;
             width: 500px;
-            border: 1px solid grey;
+            margin-bottom: 2rem;
+            border: $border;
             background-color: white;
-            margin-bottom: 1rem;
+            border-radius: $radius;
+            box-shadow: $shadow;
+            @include breakpoint(small) {
+                width: 300px;
+                height: 500px;
+                }
 
             .project-image {
                 width: 200px;
+                height: 200px;
                 float: left;
                 display: inline-block;
-                background-color: grey;
-                border-right: 1px solid grey;
+                border-right: 1px solid lightgrey;
+                @include breakpoint(small) {
+                    width: 300px;
+                    height: 300px;
+                    border-right: none;
+                    border-bottom: 1px solid lightgrey;
+                }
+                img {
+                    border-top-left-radius: $radius - 2px;
+                    border-bottom-left-radius: $radius - 2px;
+                    @include breakpoint(small) {
+                        border-top-right-radius: $radius - 2px;
+                        border-bottom-left-radius: 0;
+
+                    }
+                }
             }
 
             .project-details {
                 height: 90%;
                 display: flex;
                 flex-direction: column;
-                // align-items: center;
                 justify-content: space-between;
-                padding: .7rem;
-
-                .project-title {
-                    // margin-bottom: .5rem;
-                    // text-align: center;
-                    font-size: 1.5rem;
-                    font-weight: 700;
+                padding: .8rem;
+                font-weight: 200;
+                @include breakpoint(small) {
+                    text-align: center;
+                    height: 34%;
                 }
 
-                .project-description {
-
-                    // margin-bottom: .5rem;
+                .project-title {
+                    font-size: 1.5rem;
+                    font-weight: 700;
                 }
 
                 .project-tech {
                     color: $secondary;
                     font-style: italic;
+                    font-weight: 400;
+                }
+                .project-link {
+                    color: $primary;
+                    font-weight: 400;
+                    text-decoration: none;
                 }
             }
         }
@@ -192,36 +366,75 @@ nav {
 .resume-section {
     position: relative;
     background-color: white;
+    padding: 1rem 0;
+    .res-item {
+        flex: 1;
+    }
+    .res-item:not(:last-child) {
+        border-bottom: 1px dashed lightgrey;
+    }
 
     .res-item {
-        width: 60%;
+        min-width: 320px;
+        width: 75%;
+        height: 220px;
         margin: 0 auto;
         position: relative;
         display: flex;
-        align-content: center;
-
-        .company-image {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 1rem;
+        @include breakpoint(medium) {
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 320px;
+        }
+        @include breakpoint(small) {
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 480px;
+        }
+        .timeline-circle {
             position: absolute;
-            left: -160px;
-            width: 120px;
+            left: -8px;
+            top: 0px;
+            color: $primary;
         }
 
         .res-item-inner {
-            border-left: 1px $secondary solid;
-            height: 100px;
-            padding: 0rem 1rem 8rem 1rem;
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            @include breakpoint(medium or small) {
+                // display: block;
+                justify-content: flex-start;
+                width: 100%;
+            }
+            @include breakpoint(small) {
+                display: block;
+                text-align: center;
+                width: 100%;
+            }
 
-            .timeline-circle {
-                position: absolute;
-                left: -7px;
-                top: 0px;
-                color: $primary
+            .company-image {
+                flex-shrink: 0;
+                width: 100px;
+                height: 100px;
+                margin-right: 1.5rem;
+                @include breakpoint(small) {
+                    display: block;
+                    margin: 1rem auto;
+                    width: 80px;
+                    height: 80px;
+
+                }
             }
 
             .res-item-details {
                 display: inline-block;
-                float: left;
-                width: 280px;
 
                 .res-item-date {
                     font-size: .9rem;
@@ -243,15 +456,26 @@ nav {
                 }
 
             }
+        }
             .res-item-desc {
-                width: 59%;
+                width: 50%;
                 display: inline-block;
-                float: right;
+                @include breakpoint(medium) {
+                    justify-content: center;
+                    width: 90%;
+                }
+                @include breakpoint(small) {
+                    justify-content: center;
+                    width: 100%;
+                }
 
                 ul {
                     margin: 0;
                     padding: 0;
                     list-style: none;
+                    @include breakpoint(small) {
+                        padding-left: 10px;
+                    }
 
                     li {
                         text-indent: -10px;
@@ -279,7 +503,58 @@ nav {
                 border-top: 2px solid $secondary;
 
             }
+    }
+}
+
+footer {
+    position: relative;
+    background-color: $primary;
+    padding: 1.5rem 0 1rem 0;
+    .footer-container {
+        text-align: center;
+        width: 75%;
+        margin: auto;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        @include breakpoint(small) {
+            height: 200px;
+            justify-content: space-between
+        }
+
+        .contact-me {
+            font-size: 1.2rem;
+            margin: auto;
+            color: white;
+            font-weight: 200;
+        }
+        .email {
+            white-space: nowrap;
+            margin: .5rem auto;
+            font-weight: 400;
+            color: white;
+        }
+        .social-icons {
+            margin: 0 auto;
+            width: 200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            a {
+                font-size: 2rem;
+                text-decoration: none;
+                color:white;
+                }
+            a:hover {
+                color: $highlight
+            }
+        }
+        .copyright {
+            text-align: center;
+            margin: auto;
+            color: white;
+            font-weight: 200;
         }
     }
-
 }
