@@ -135,6 +135,7 @@ html {
         }
         @include breakpoint(small) {
             width: 90%;
+            justify-content: space-around;
         }
         .andy-image {
             margin: auto;
@@ -159,11 +160,11 @@ html {
             color: black;
             margin-bottom: 2rem;
             @include breakpoint(small) {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
         }
         .sub-header {
-            font-size: 1.5rem;
+            font-size: 1rem;
             font-weight: 200;
             line-height: 2rem;
             @include breakpoint(small) {
@@ -182,6 +183,7 @@ html {
             flex-direction: row;
             justify-content: space-around;
             @include breakpoint(small) {
+                margin-top: 3rem;
                 justify-content: space-between;
             }
             .sub-container-tools, .sub-container-skills {
@@ -222,6 +224,7 @@ html {
                     padding: .5rem .8rem;
                     border-radius: $radius-min;
                     @include breakpoint(small) {
+                        padding: .3rem .6rem;
                         font-size: .7rem;
                     }
                 }
@@ -233,6 +236,9 @@ html {
                     height: 100%;
                     font-size: 1.2rem;
                     font-weight: 400;
+                    @include breakpoint(small) {
+                        font-size: 1rem;
+                    }
                 }
             }
         }

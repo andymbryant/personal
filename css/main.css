@@ -96,7 +96,8 @@ html {
         width: 70%; } }
     @media (min-width: 320px) and (max-width: 767px) {
       .title-section .title-card {
-        width: 90%; } }
+        width: 90%;
+        justify-content: space-around; } }
     .title-section .title-card .andy-image {
       margin: auto;
       width: 150px;
@@ -118,9 +119,9 @@ html {
       margin-bottom: 2rem; }
       @media (min-width: 320px) and (max-width: 767px) {
         .title-section .title-card .header {
-          font-size: 2rem; } }
+          font-size: 1.8rem; } }
     .title-section .title-card .sub-header {
-      font-size: 1.5rem;
+      font-size: 1rem;
       font-weight: 200;
       line-height: 2rem; }
       @media (min-width: 320px) and (max-width: 767px) {
@@ -138,6 +139,7 @@ html {
       justify-content: space-around; }
       @media (min-width: 320px) and (max-width: 767px) {
         .title-section .title-card .container {
+          margin-top: 3rem;
           justify-content: space-between; } }
       .title-section .title-card .container .sub-container-tools, .title-section .title-card .container .sub-container-skills {
         position: relative;
@@ -174,6 +176,7 @@ html {
           border-radius: 10px; }
           @media (min-width: 320px) and (max-width: 767px) {
             .title-section .title-card .container .sub-container-tools .language, .title-section .title-card .container .sub-container-skills .language {
+              padding: .3rem .6rem;
               font-size: .7rem; } }
         .title-section .title-card .container .sub-container-tools .skills, .title-section .title-card .container .sub-container-skills .skills {
           display: flex;
@@ -182,6 +185,9 @@ html {
           height: 100%;
           font-size: 1.2rem;
           font-weight: 400; }
+          @media (min-width: 320px) and (max-width: 767px) {
+            .title-section .title-card .container .sub-container-tools .skills, .title-section .title-card .container .sub-container-skills .skills {
+              font-size: 1rem; } }
     .title-section .title-card .student {
       font-style: italic; }
   .title-section a {
