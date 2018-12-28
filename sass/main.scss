@@ -267,6 +267,9 @@ html {
     padding: 2rem;
     display: flex;
     align-content: center;
+    @include breakpoint(small) {
+        padding: 1rem;
+    }
 
     .about-card {
         margin: auto;
@@ -276,7 +279,10 @@ html {
             font-size: 1.8rem;
             font-weight: 300;
             color: white;
-            margin-bottom: 1rem;
+            // margin-bottom: 1rem;
+            @include breakpoint(small) {
+                font-size: 1rem;
+            }
         }
         .about-subheader {
             font-weight: 200;

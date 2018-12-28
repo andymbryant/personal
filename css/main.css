@@ -207,6 +207,9 @@ html {
   padding: 2rem;
   display: flex;
   align-content: center; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .about-section {
+      padding: 1rem; } }
   .about-section .about-card {
     margin: auto;
     text-align: center;
@@ -214,8 +217,10 @@ html {
     .about-section .about-card .about-header {
       font-size: 1.8rem;
       font-weight: 300;
-      color: white;
-      margin-bottom: 1rem; }
+      color: white; }
+      @media (min-width: 320px) and (max-width: 767px) {
+        .about-section .about-card .about-header {
+          font-size: 1rem; } }
     .about-section .about-card .about-subheader {
       font-weight: 200;
       color: white; }
