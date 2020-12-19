@@ -1,0 +1,22 @@
+{
+  "name": "personal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass --watch sass -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andymbryant/personal.git"
+  },
+  "author": "andymbryant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andymbryant/personal/issues"
+  },
+  "homepage": "https://github.com/andymbryant/personal#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

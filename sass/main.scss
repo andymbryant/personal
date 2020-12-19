@@ -165,7 +165,7 @@ html {
             }
         }
         .sub-header {
-            font-size: 1rem;
+            font-size: 1.5rem;
             font-weight: 200;
             line-height: 2rem;
             @include breakpoint(small) {
@@ -187,13 +187,14 @@ html {
                 margin-top: 3rem;
                 justify-content: space-between;
             }
-            .sub-container-tools, .sub-container-skills {
+            .sub-ctr {
                 position: relative;
                 border: $border;
                 border-radius: $radius;
                 padding: 1rem;
                 width: 30%;
                 box-shadow: $shadow;
+                margin: 0 1rem;
                 @include breakpoint(small) {
                     width: 38%;
                 }
@@ -209,15 +210,15 @@ html {
                     background-color: $primary;
                     padding: .3rem .8rem 0;
                 }
-                .languages {
+                .items-ctr {
                     display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    position: relative; 
+                    align-items: center;
+                    justify-content: space-around;
+                    position: relative;
                     flex-wrap: wrap;
                 }
 
-                .language {
+                .item {
                     display: inline-block;
                     background-color: rgb(236, 234, 234);
                     margin: .2rem;
@@ -230,7 +231,7 @@ html {
                     }
                 }
 
-                .skills {
+                .backend {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
@@ -287,7 +288,7 @@ html {
         .about-subheader {
             font-weight: 200;
             color:white;
-        
+
         }
     }
   }
@@ -316,6 +317,7 @@ html {
             background-color: white;
             border-radius: $radius;
             box-shadow: $shadow;
+            margin: 1rem;
             @include breakpoint(small) {
                 width: 300px;
                 height: 500px;
@@ -325,7 +327,6 @@ html {
                 width: 200px;
                 height: 200px;
                 float: left;
-                display: inline-block;
                 border-right: 1px solid lightgrey;
                 @include breakpoint(small) {
                     width: 300px;
@@ -350,7 +351,7 @@ html {
                 flex-direction: column;
                 justify-content: space-between;
                 padding: .8rem;
-                font-weight: 200;
+                font-weight: 300;
                 @include breakpoint(small) {
                     text-align: center;
                     height: 34%;
